@@ -16,7 +16,7 @@ import DishComments from './DishComments'
 // for providing a state, we need a CLASS COMPONENT
 // so let's convert Home, which is a function currently, into a class based component
 
-const Home = () => {
+const Home = ({ subTitle }) => {
 
     const [selectedDish, setSelectedDish] = useState(null)
     const [title, setTitle] = useState('Welcome to Strivestaurant!')
@@ -43,7 +43,7 @@ const Home = () => {
                     <h3 onClick={() => {
                         // this.setState({ title: 'Hello Hilary!' }) 
                         setTitle('Hello Hilary!')
-                    }}>We can only serve pasta</h3>
+                    }}>{subTitle}</h3>
                     <Carousel className="mt-4">
                         {
                             dishes.map(dish => (
